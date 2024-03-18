@@ -1,10 +1,12 @@
-package com.dsa.aoa.arrays;
+package com.dsa.arrays;
 
 import java.util.Arrays;
 
 public class SumArray {
     public static void main(String[] args) {
+
         int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7};
+
         System.out.println(nums.length);
         System.out.println(Arrays.toString(nums));
         System.out.println(sum(nums));

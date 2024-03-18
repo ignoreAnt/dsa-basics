@@ -1,4 +1,4 @@
-package com.dsa.aoa.arrays;
+package com.dsa.arrays;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;

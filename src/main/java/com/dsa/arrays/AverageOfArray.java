@@ -1,4 +1,4 @@
-package com.dsa.aoa.arrays;
+package com.dsa.arrays;
 
 public class AverageOfArray {
 
