@@ -29,13 +29,16 @@ public class CountNumberOfDigits {
 
     public static int countDigits(int n){
         int count = 0;
+        if (n == 0){
+            return 1;
+        }
         while (n != 0){
             n = n/10;
             count++;
         }
 
         return count;
-        // Time complexity ==> O(n)
+        // Time complexity ==> O(log[10]n)
         // Auxiliary Space ==> O(1)
     }
 
@@ -44,7 +47,7 @@ public class CountNumberOfDigits {
             return 1;
         }
          return 1 + recurCountDigits(n/10);
-        // Time Complexity ==> O(n)
-        // Auxiliary Space ==> ??
+        // Time Complexity ==> O(log[10]n)
+        // Auxiliary Space ==> O(log[10]n)
     }
 }
