@@ -39,6 +39,9 @@ public class Exercise1 {
 //        System.out.println(Arrays.toString(twoSum(new int[]{12, 34, 98}, 46)));
 //
 //        System.out.println(Arrays.toString(twoSumV2(new int[]{3, 2, 4}, 6)));
+        System.out.println(Arrays.toString(twoSumV3(new int[]{2,7,11,15}, 9)));
+        System.out.println(Arrays.toString(twoSumV3(new int[]{3,2,4}, 6)));
+        System.out.println(Arrays.toString(twoSumV3(new int[]{3,3}, 6)));
 
 
     }
@@ -160,6 +163,27 @@ public class Exercise1 {
                 result[1] = unique.get(elementToSearch);
                 return result;
             }
+        }
+
+        // time complexity :  O(n) + O(n) ==> 2 O(n) ==> O(n)
+        // Auxiliary space :  O(n)
+        return result;
+    }
+
+    public static int[] twoSumV3(int[] arr, int target){
+
+        Map<Integer, Integer> unique = new HashMap<>();
+        int[] result = new int[2];
+        // key --> value
+
+        for (int i = 0; i < arr.length; i++) {  // O(n)
+            int elementToSearch = target - arr[i];
+            if(unique.containsKey(elementToSearch)){ //O(1)
+                result[0] = unique.get(elementToSearch);
+                result[1] = i;
+                return result;
+            }
+            unique.put(arr[i], i);
         }
 
         // time complexity :  O(n) + O(n) ==> 2 O(n) ==> O(n)

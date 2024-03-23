@@ -35,6 +35,7 @@ build/
 .vscode/
 .idea
 dsa-basics.iml
+.idea/misc.xml
 
 ### Mac OS ###
 .DS_Store

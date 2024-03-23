@@ -23,7 +23,7 @@ public class StringReverse {
 
         return new String(chars);
         // Time complexity : O(n)
-        // Space Complexity : O(n)
+        // Auxiliary Space : O(n)
     }
 
 
