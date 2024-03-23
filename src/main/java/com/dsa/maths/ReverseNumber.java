@@ -15,8 +15,13 @@ package com.dsa.maths;
  */
 public class ReverseNumber {
     public static void main(String[] args) {
+
+        System.out.println(1567 / 10);  // ==> reduce a number by 1 digit , divide it by 10
+        System.out.println(1567 % 10);  // ==> extract the left most digit of the number, % by 10
+        // x < y ==> x % y ==> x
         System.out.println(reverseNumber(356));
         System.out.println(reverseNumber(2986));
+        System.out.println(reverseNumber(0));
     }
 
     public static int reverseNumber(int n){
@@ -27,5 +32,16 @@ public class ReverseNumber {
         }
 
         return reverse;
+
+        // n = 875
+        // ==> 8 * 100 + 7 * 10 + 5
+        // ==> 8 * 10^2 + 7 * 10^1 + 5 * 10^0
+        //
+        // reverse
+        // Do following till the number reaches zero
+        // 1. Shifting the number to left by multiplying with 10
+        // 2. Extract the last number and add to the above result
+        // 3. remove the last digit
+        // 5 * 100 + 7 * 10 + 8
     }
 }
