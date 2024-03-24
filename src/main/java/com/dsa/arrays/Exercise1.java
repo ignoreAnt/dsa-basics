@@ -186,7 +186,7 @@ public class Exercise1 {
             unique.put(arr[i], i);
         }
 
-        // time complexity :  O(n) + O(n) ==> 2 O(n) ==> O(n)
+        // time complexity :  O(n)
         // Auxiliary space :  O(n)
         return result;
     }
