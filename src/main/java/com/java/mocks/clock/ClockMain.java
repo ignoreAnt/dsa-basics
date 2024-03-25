@@ -8,5 +8,7 @@ public class ClockMain {
         Clock myClock = new Clock("black", "Round", true);
         Clock yourClock = new Clock("White", "Square", false);
 
+        boolean equals = myClock.equals(yourClock);
+
     }
 }
