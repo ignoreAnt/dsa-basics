@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public interface TimeTaskAble {
 
-   public void start(LocalDateTime dateTime);
-    public void end(LocalDateTime dateTime);
-    public void getDuration ();
+    void start(LocalDateTime dateTime);
+    void end(LocalDateTime dateTime);
+    void getDuration();
 }

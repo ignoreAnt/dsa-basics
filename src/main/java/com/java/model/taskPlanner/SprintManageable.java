@@ -1,10 +1,15 @@
 package com.java.model.taskPlanner;
 
+import java.time.Duration;
+import java.util.List;
+
 public interface SprintManageable {
 
-    public void changeDuration();
-    public void  addTasks();
-    public void removeTask();
-    public void OrderTasks();
-    public void  filterTasks();
+    void changeDuration(Duration duration);
+    void addAllTasks(List<Task> tasks);
+
+    void addTask(Task task);
+    void removeTask(Task task);
+    void sortTasks();
+    void filterTasks();
 }

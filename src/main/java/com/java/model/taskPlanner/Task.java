@@ -1,20 +1,31 @@
 package com.java.model.taskPlanner;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class Task extends WorkItem implements TaskManageable {
-//    private String taskId;
-//    private String taskName;
-//    private String description;
 
-    private String estimate;
+    private Duration estimate;
     private LocalDateTime startTime;
-    private  LocalDateTime endTime;
-    private String owner;
+    private LocalDateTime endTime;
+    private User owner;
+    private TaskType taskType;
+    private TaskStatus taskStatus;
+
+    public Task(String id, String name, String description, TaskType taskType) {
+        this.taskType = taskType;
+        this.id = id;
+        this.name= name;
+        this.description = description;
+    }
 
     @Override
-    public void getCompletionPercentage() {
-        System.out.println("Task completed : 80%");
+    public TaskStatus getTaskStatus() {
+        return taskStatus;
+    }
+
+    public void setTaskStatus(TaskStatus taskStatus) {
+        this.taskStatus = taskStatus;
     }
 
     @Override
@@ -23,17 +34,24 @@ public class Task extends WorkItem implements TaskManageable {
     }
 
     @Override
-    public void transferTask() {
-
+    public void transferTask(User user) {
+        this.owner = user;
     }
 
     @Override
-    public void estimateTask() {
-
+    public void assignTaskType(TaskType taskType) {
+        this.taskType = taskType;
     }
 
     @Override
-    public void assignTaskType() {
-
+    public String toString() {
+        return "Task{" +
+                "owner=" + owner +
+                ", taskType=" + taskType +
+                ", taskStatus=" + taskStatus +
+                ", id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
