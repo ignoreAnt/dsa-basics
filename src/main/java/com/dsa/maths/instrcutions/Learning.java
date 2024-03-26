@@ -1,4 +1,4 @@
-package com.dsa.maths;
+package com.dsa.maths.instrcutions;
 
 public class Learning {
     public static void main(String[] args) {

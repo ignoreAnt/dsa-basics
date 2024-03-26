@@ -1,4 +1,4 @@
-package com.dsa.maths;
+package com.dsa.maths.complete;
 
 
 /**
