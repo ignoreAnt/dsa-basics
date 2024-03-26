@@ -2,7 +2,7 @@ package com.dsa.maths;
 
 public class NumberOfTrailingZerosInFactorial {
     public static void main(String[] args) {
-        System.out.println(numberOfZeros(10));
+        System.out.println(numberOfZeros(5));
     }
 
     public static int numberOfZeros(int n){

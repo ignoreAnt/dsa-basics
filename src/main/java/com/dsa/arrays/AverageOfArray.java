@@ -8,7 +8,7 @@ public class AverageOfArray {
         int [] arrempty = new int[] {};
         int [] arrnull = null;
 
-        //int averageOfArray =calcAverageOfArray(arr);
+//        int averageOfArray =calcAverageOfArray(arr);
 //        int averageOfArray =calcAverageOfArray(arrempty);
         int averageOfArray =calcAverageOfArray(arrnull);
         System.out.println("Average is -- "+averageOfArray);
@@ -16,12 +16,16 @@ public class AverageOfArray {
 
     public static int calcAverageOfArray(int [] arr)
     {
-        if (arr==null || arr.length ==0 )
+    /*short circuit - null should be in the first */
+
+        if (arr==null || arr.length==0 )
         {
             return 0;
         }
-    int arrLength= arr.length;
-    int arrSum=0;
+
+        int arrLength= arr.length;
+
+        int arrSum=0;
 
         for (int i = 0; i < arrLength; i++) {
 
