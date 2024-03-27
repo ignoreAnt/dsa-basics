@@ -21,7 +21,7 @@ public class Sprint extends WorkItem implements SprintManageable{
         this.name = name;
         this.description = description;
         this.duration = duration;
-        this.tasks = new LinkedList<>();
+        this.tasks = new ArrayList<>();
     }
 
     public String getName(){
@@ -70,7 +70,7 @@ public class Sprint extends WorkItem implements SprintManageable{
 
     @Override
     public void sortTasks() {
-
+//            Collections.sort(tasks);
     }
 
     @Override

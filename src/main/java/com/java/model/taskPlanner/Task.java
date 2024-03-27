@@ -2,6 +2,7 @@ package com.java.model.taskPlanner;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Task extends WorkItem implements TaskManageable {
 
@@ -54,4 +55,10 @@ public class Task extends WorkItem implements TaskManageable {
                 ", description='" + description + '\'' +
                 '}';
     }
+
+//    @Override
+//    public int compareTo(Task task) {
+//        String idName = this.id + this.name;
+//        return idName.compareTo(task.id + task.name);
+//    }
 }

@@ -1,7 +1,9 @@
 package com.java.model.taskPlanner;
 
 import java.time.Duration;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class TaskPlannerMain {
     public static void main(String[] args) {
@@ -21,6 +23,13 @@ public class TaskPlannerMain {
         sprint.getCompletionPercentage();
 
         System.out.println(sprint.getTasks());
+//        sprint.sortTasks();
+        sprint.getTasks().sort(Comparator.comparingInt(taskOne -> taskOne.name.length()));
+        System.out.println(sprint.getTasks());
+        sprint.getTasks().sort(Comparator.comparing(o -> o.description));
+        System.out.println(sprint.getTasks());
+
+
 
         task.setTaskStatus(TaskStatus.IN_PROGRESS);
         task1.setTaskStatus(TaskStatus.COMPLETED);
