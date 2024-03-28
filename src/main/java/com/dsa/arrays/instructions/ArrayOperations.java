@@ -39,6 +39,8 @@ public class ArrayOperations {
         }
 
         return -1;
+        // TC : O(n)
+        // AS : O(1)
     }
 
     public static List<Integer> searchAllOccurrences(int[] nums, int target){

@@ -10,7 +10,7 @@ public class StringReverse {
     }
 
     public static String reverse(String s){
-        char[] chars = s.toCharArray();
+        char[] chars = s.toCharArray(); // O(n)
 
         int i = 0;
         int j = chars.length - 1;
